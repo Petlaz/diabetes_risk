@@ -1,10 +1,16 @@
 # Explainable AI for Diabetes Risk Prediction 
 
+[![GitHub Repository](https://img.shields.io/badge/GitHub-diabetes__risk-blue?logo=github)](https://github.com/Petlaz/diabetes_risk)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red?logo=pytorch)](https://pytorch.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 **Status:** 🟢 Week 1-2 COMPLETE ✅ | Week 3-4 READY 🚀  
 **Performance:** 5/5 Baseline Models Achieving 93.4%+ ROC-AUC  
+**Repository:** https://github.com/Petlaz/diabetes_risk  
 **Latest Update:** December 19, 2025
 
-A comprehensive explainable AI system for diabetes risk prediction achieving clinical-grade performance with full interpretability for healthcare decision support.
+A comprehensive explainable AI system for diabetes risk prediction achieving clinical-grade performance with full interpretability for healthcare decision support. This project demonstrates advanced machine learning techniques optimized for Apple Silicon (Mac M1/M2) and clinical decision-making contexts.
 
 ## 🎯 Project Achievements (Week 1-2)
 
@@ -29,10 +35,11 @@ A comprehensive explainable AI system for diabetes risk prediction achieving cli
 
 ## 🚀 Quick Start Guide
 
-### **1. Environment Setup**
+### **1. Clone and Setup**
 ```bash
-# Clone and navigate to project
-cd /path/to/diabetes/project
+# Clone the repository
+git clone https://github.com/Petlaz/diabetes_risk.git
+cd diabetes_risk
 
 # Create virtual environment  
 python -m venv .venv
@@ -132,16 +139,37 @@ diabetes/
 - False negative rate < 10% (clinical priority)
 - Clinical value score improvement > 50 units
 
-## Documentation
+## 📚 Documentation
 
-- [Project Plan and Roadmap](reports/project_plan_and_roadmap.md)
-- [Literature Review](reports/literature_review.md)
-- [Data Dictionary](data/data_dictionary.md)
+- **[Project Plan and Roadmap](reports/project_plan_and_roadmap.md)** - Complete project timeline and achievements
+- **[Week 1-2 Meeting Report](reports/biweekly_meeting_1.md)** - Detailed baseline modeling results
+- **[Literature Review](reports/literature_review.md)** - Research foundation and references
+- **[Data Dictionary](data/data_dictionary.md)** - Feature descriptions and metadata
+- **[Final Report Draft](reports/final_report_draft.md)** - Comprehensive project findings
 
-## License
+## 🛠️ Technical Stack
+
+- **Machine Learning:** PyTorch, Scikit-learn, XGBoost, Pandas, NumPy
+- **Visualization:** Matplotlib, Seaborn, Plotly
+- **Development:** Jupyter Notebooks, Python 3.8+
+- **Optimization:** Apple Silicon MPS acceleration
+- **Deployment:** Docker, Gradio web interface
+
+## 🤝 Contributing
+
+This project is part of ongoing research in explainable AI for healthcare. Feel free to explore the codebase, reproduce results, and adapt methodologies for your own healthcare ML applications.
+
+## 📄 License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-## Contact
+## 👨‍💻 Author
 
-[Your contact information here]
+**Peter Ugonna Obi**  
+- GitHub: [@Petlaz](https://github.com/Petlaz)
+- Repository: [diabetes_risk](https://github.com/Petlaz/diabetes_risk)
+- Project Focus: Explainable AI in Healthcare Applications
+
+---
+
+**⭐ If you find this project helpful, please consider giving it a star on GitHub!**
