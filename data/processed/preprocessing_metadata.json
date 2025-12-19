@@ -1,0 +1,158 @@
+{
+  "processing_date": "2025-12-15",
+  "original_shape": [
+    100000,
+    29
+  ],
+  "final_shape": [
+    100000,
+    29
+  ],
+  "target_column": "diagnosed_diabetes",
+  "selected_features": [
+    "hba1c",
+    "glucose_fasting",
+    "family_history_diabetes",
+    "age",
+    "employment_status_Employed",
+    "smoking_status_Never",
+    "ethnicity_White",
+    "physical_activity_minutes_per_week",
+    "gender_Male",
+    "gender_Female",
+    "education_level",
+    "hypertension_history",
+    "bmi",
+    "heart_rate",
+    "systolic_bp",
+    "triglycerides",
+    "cardiovascular_history",
+    "ethnicity_Black",
+    "alcohol_consumption_per_week",
+    "income_level",
+    "hdl_cholesterol",
+    "smoking_status_Former",
+    "screen_time_hours_per_day",
+    "employment_status_Retired",
+    "diastolic_bp",
+    "employment_status_Unemployed",
+    "ethnicity_Hispanic",
+    "smoking_status_Current"
+  ],
+  "categorical_mappings": {
+    "education_level": {
+      "No formal": 0,
+      "Highschool": 1,
+      "Graduate": 2,
+      "Postgraduate": 3
+    },
+    "income_level": {
+      "Low": 0,
+      "Lower-Middle": 1,
+      "Middle": 2,
+      "Upper-Middle": 3,
+      "High": 4
+    },
+    "gender": {
+      "type": "one_hot",
+      "columns": [
+        "gender_Female",
+        "gender_Male",
+        "gender_Other"
+      ],
+      "original_values": [
+        "Male",
+        "Female",
+        "Other"
+      ]
+    },
+    "ethnicity": {
+      "type": "one_hot",
+      "columns": [
+        "ethnicity_Asian",
+        "ethnicity_Black",
+        "ethnicity_Hispanic",
+        "ethnicity_Other",
+        "ethnicity_White"
+      ],
+      "original_values": [
+        "Asian",
+        "White",
+        "Hispanic",
+        "Black",
+        "Other"
+      ]
+    },
+    "employment_status": {
+      "type": "one_hot",
+      "columns": [
+        "employment_status_Employed",
+        "employment_status_Retired",
+        "employment_status_Student",
+        "employment_status_Unemployed"
+      ],
+      "original_values": [
+        "Employed",
+        "Unemployed",
+        "Retired",
+        "Student"
+      ]
+    },
+    "smoking_status": {
+      "type": "one_hot",
+      "columns": [
+        "smoking_status_Current",
+        "smoking_status_Former",
+        "smoking_status_Never"
+      ],
+      "original_values": [
+        "Never",
+        "Former",
+        "Current"
+      ]
+    }
+  },
+  "transformation_log": {
+    "physical_activity_minutes_per_week": {
+      "type": "log_shifted",
+      "shift": "1",
+      "original_skew": 1.3899701983551658,
+      "new_skew": -0.6541577075153492
+    },
+    "family_history_diabetes": {
+      "type": "log_shifted",
+      "shift": "1",
+      "original_skew": 1.356029066851414,
+      "new_skew": 1.3560290668514123
+    },
+    "hypertension_history": {
+      "type": "log_shifted",
+      "shift": "1",
+      "original_skew": 1.1497989235311177,
+      "new_skew": 1.1497989235311195
+    },
+    "cardiovascular_history": {
+      "type": "log_shifted",
+      "shift": "1",
+      "original_skew": 3.1164990238427084,
+      "new_skew": 3.1164990238427115
+    }
+  },
+  "scaler_type": "StandardScaler",
+  "split_sizes": {
+    "train": 70000,
+    "validation": 15000,
+    "test": 15000
+  },
+  "class_distribution": {
+    "1": 0.59998,
+    "0": 0.40002
+  },
+  "features_removed_correlation": [
+    "glucose_postprandial",
+    "ldl_cholesterol",
+    "waist_to_hip_ratio"
+  ],
+  "feature_selection_method": "mutual_information",
+  "random_state": 42
+}

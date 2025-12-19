@@ -1,0 +1,211 @@
+# Project Configuration
+# This file contains all configurable parameters for the Health XAI project
+
+# Data Configuration
+data:
+  raw_data_path: "data/raw/"
+  processed_data_path: "data/processed/" 
+  test_size: 0.15
+  validation_size: 0.15
+  random_state: 42
+  
+  # Feature configuration
+  categorical_features: 
+    - "gender"
+    - "smoking_status"
+    - "family_history"
+  
+  numerical_features:
+    - "age" 
+    - "bmi"
+    - "blood_pressure_systolic"
+    - "blood_pressure_diastolic"
+    - "glucose_level"
+    - "cholesterol"
+    - "exercise_frequency"
+  
+  target_variable: "health_risk"
+  
+  # Preprocessing parameters
+  preprocessing:
+    handle_missing: "median"  # Options: median, mean, mode, drop
+    outlier_detection: "iqr"  # Options: iqr, zscore, isolation_forest
+    scaling_method: "standard"  # Options: standard, minmax, robust
+    feature_selection: true
+    selection_method: "mutual_info"  # Options: mutual_info, chi2, f_classif
+
+# Model Configuration  
+models:
+  # Algorithms to train and compare
+  algorithms:
+    - "logistic_regression"
+    - "random_forest"
+    - "xgboost"
+    - "lightgbm"
+    - "svm"
+    
+  # Cross-validation settings
+  cv_folds: 5
+  cv_scoring: "roc_auc"
+  
+  # Hyperparameter tuning
+  hyperparameter_tuning:
+    enabled: true
+    method: "optuna"  # Options: optuna, grid_search, random_search
+    n_trials: 100
+    timeout: 3600  # seconds
+    
+  # Model selection criteria
+  selection_metric: "roc_auc"
+  
+  # Individual model parameters
+  logistic_regression:
+    C: [0.1, 1, 10, 100]
+    penalty: ["l1", "l2", "elasticnet"]
+    solver: ["liblinear", "saga"]
+    
+  random_forest:
+    n_estimators: [100, 200, 500]
+    max_depth: [3, 5, 10, None]
+    min_samples_split: [2, 5, 10]
+    min_samples_leaf: [1, 2, 4]
+    
+  xgboost:
+    n_estimators: [100, 200, 500]
+    learning_rate: [0.01, 0.1, 0.2]
+    max_depth: [3, 5, 7]
+    subsample: [0.8, 0.9, 1.0]
+    
+  lightgbm:
+    n_estimators: [100, 200, 500]
+    learning_rate: [0.01, 0.1, 0.2]
+    max_depth: [3, 5, 7]
+    num_leaves: [31, 50, 100]
+    
+  svm:
+    C: [0.1, 1, 10, 100]
+    kernel: ["rbf", "poly", "sigmoid"]
+    gamma: ["scale", "auto"]
+
+# Explainability Configuration
+explainability:
+  # SHAP configuration
+  shap:
+    explainer_type: "tree"  # Options: tree, linear, kernel, deep
+    n_samples: 100  # For sampling-based explainers
+    feature_perturbation: "tree_path_dependent"
+    
+  # LIME configuration  
+  lime:
+    n_samples: 5000
+    n_features: 10
+    kernel_width: 0.75
+    
+  # Explanation generation
+  generate_global: true
+  generate_local: true
+  save_explanations: true
+  
+  # Visualization settings
+  plot_settings:
+    figsize: [10, 8]
+    dpi: 300
+    format: "png"
+    save_plots: true
+
+# Evaluation Configuration
+evaluation:
+  # Metrics to compute
+  classification_metrics:
+    - "accuracy"
+    - "precision" 
+    - "recall"
+    - "f1_score"
+    - "roc_auc"
+    - "precision_recall_auc"
+    
+  # Threshold analysis
+  threshold_analysis:
+    enabled: true
+    thresholds: [0.3, 0.4, 0.5, 0.6, 0.7]
+    
+  # Cross-validation settings
+  cross_validation:
+    enabled: true
+    folds: 5
+    stratified: true
+    
+  # Statistical tests
+  statistical_tests:
+    mcnemar_test: true
+    permutation_test: true
+    bootstrap_ci: true
+    
+# Logging Configuration
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_handler: true
+  console_handler: true
+  log_file: "logs/health_xai.log"
+  
+# Results Configuration  
+results:
+  output_dir: "results/"
+  save_models: true
+  save_predictions: true
+  save_metrics: true
+  save_plots: true
+  
+  # File formats
+  model_format: "joblib"  # Options: joblib, pickle
+  data_format: "csv"      # Options: csv, parquet
+  plot_format: "png"      # Options: png, jpg, pdf, svg
+  
+# Application Configuration
+app:
+  # Gradio settings
+  gradio:
+    share: false
+    server_name: "0.0.0.0"
+    server_port: 7860
+    title: "Health XAI - Risk Assessment System"
+    description: "Explainable AI system for health risk prediction"
+    
+  # Performance settings
+  max_concurrent_users: 100
+  prediction_timeout: 30  # seconds
+  explanation_timeout: 60 # seconds
+
+# Environment Configuration  
+environment:
+  random_seed: 42
+  n_jobs: -1  # Use all available cores
+  memory_limit: "8GB"
+  cache_size: "2GB"
+  
+  # GPU settings (if available)
+  use_gpu: false
+  gpu_memory_fraction: 0.5
+
+# Quality Assurance
+quality:
+  # Data validation
+  data_validation:
+    check_missing_values: true
+    check_duplicates: true
+    check_outliers: true
+    check_data_drift: true
+    
+  # Model validation  
+  model_validation:
+    check_overfitting: true
+    check_underfitting: true
+    check_bias: true
+    check_fairness: true
+    
+  # Explanation validation
+  explanation_validation:
+    check_faithfulness: true
+    check_stability: true
+    check_comprehensiveness: true

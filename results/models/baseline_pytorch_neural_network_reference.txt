@@ -1,0 +1,4 @@
+PyTorch Neural Network results saved at: ../results/pytorch_neural_network_results.pkl
+Original training completed with Mac M1/M2 optimization
+ROC-AUC: 0.9436
+Training Time: 18.7 seconds

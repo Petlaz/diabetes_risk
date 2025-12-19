@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  health-xai-app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "7860:7860"  # Gradio app
+      - "8888:8888"  # Jupyter notebooks
+    volumes:
+      - ../data:/app/data
+      - ../results:/app/results
+      - ../notebooks:/app/notebooks
+    environment:
+      - PYTHONPATH=/app/src
+      - JUPYTER_ENABLE_LAB=yes
+    command: ["python", "app/app_gradio.py"]
+    
+  jupyter:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8889:8888"  # Alternative Jupyter port
+    volumes:
+      - ../:/app
+    environment:
+      - PYTHONPATH=/app/src
+      - JUPYTER_ENABLE_LAB=yes
+    command: ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''"]
+    
+  # Optional: Add a database service for future enhancements
+  # postgres:
+  #   image: postgres:13
+  #   environment:
+  #     POSTGRES_DB: health_xai
+  #     POSTGRES_USER: user
+  #     POSTGRES_PASSWORD: password
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   postgres_data:

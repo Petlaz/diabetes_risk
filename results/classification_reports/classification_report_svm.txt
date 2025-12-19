@@ -1,0 +1,21 @@
+Classification Report - SVM
+============================
+
+ROC-AUC Score: 0.9353
+Training Time: 398.23 seconds
+
+              precision    recall  f1-score   support
+
+ No Diabetes     0.8263    0.9277    0.8741      6000
+    Diabetes     0.9475    0.8700    0.9071      9000
+
+    accuracy                         0.8931     15000
+   macro avg     0.8869    0.8988    0.8906     15000
+weighted avg     0.8990    0.8931    0.8939     15000
+
+
+Detailed Metrics:
+- True Negatives:  5566
+- False Positives: 434
+- False Negatives: 1170
+- True Positives:  7830

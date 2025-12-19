@@ -1,0 +1,26 @@
+{
+  "experiment_date": "2025-12-19 14:45:46",
+  "experiment_type": "baseline_models",
+  "phase": "weeks_1-2",
+  "hyperparameter_tuning": false,
+  "random_state": 42,
+  "dataset_info": {
+    "train_samples": 70000,
+    "val_samples": 15000,
+    "test_samples": 15000,
+    "features": 28,
+    "target_distribution": {
+      "1": 0.5999857142857142,
+      "0": 0.4000142857142857
+    }
+  },
+  "model_files": {
+    "Logistic Regression": "../results/models/baseline_logistic_regression.pkl",
+    "Random Forest": "../results/models/baseline_random_forest.pkl",
+    "XGBoost": "../results/models/baseline_xgboost.pkl",
+    "SVM": "../results/models/baseline_svm.pkl",
+    "PyTorch Neural Network": "../results/models/baseline_pytorch_neural_network_reference.txt"
+  },
+  "best_model": "PyTorch Neural Network",
+  "best_roc_auc": 0.9436367777777778
+}

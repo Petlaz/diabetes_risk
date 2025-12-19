@@ -1,0 +1,49 @@
+# Core ML and Data Science
+pandas>=1.5.0
+numpy>=1.21.0
+scikit-learn>=1.1.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.10.0
+
+# XAI Libraries
+shap>=0.41.0
+lime>=0.2.0.1
+
+# Model Training and Validation
+imbalanced-learn>=0.9.0
+optuna>=3.0.0
+xgboost>=1.6.0
+lightgbm>=3.3.0
+
+# Web Interface
+gradio>=3.40.0
+streamlit>=1.25.0
+
+# Jupyter and Notebooks
+jupyter>=1.0.0
+ipykernel>=6.15.0
+nbconvert>=7.0.0
+
+# Utilities
+pyyaml>=6.0
+tqdm>=4.64.0
+joblib>=1.2.0
+python-dotenv>=0.20.0
+
+# Visualization Enhancement
+kaleido>=0.2.1  # For plotly static exports
+
+# Statistical Analysis
+scipy>=1.9.0
+statsmodels>=0.13.0
+
+# Development and Testing
+pytest>=7.1.0
+black>=22.6.0
+flake8>=5.0.0
+isort>=5.10.0
+
+# Documentation
+sphinx>=5.1.0
+sphinx-rtd-theme>=1.0.0

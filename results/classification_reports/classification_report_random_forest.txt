@@ -1,0 +1,21 @@
+Classification Report - Random Forest
+======================================
+
+ROC-AUC Score: 0.9415
+Training Time: 1.21 seconds
+
+              precision    recall  f1-score   support
+
+ No Diabetes     0.8334    0.9990    0.9087      6000
+    Diabetes     0.9992    0.8669    0.9284      9000
+
+    accuracy                         0.9197     15000
+   macro avg     0.9163    0.9329    0.9186     15000
+weighted avg     0.9329    0.9197    0.9205     15000
+
+
+Detailed Metrics:
+- True Negatives:  5994
+- False Positives: 6
+- False Negatives: 1198
+- True Positives:  7802

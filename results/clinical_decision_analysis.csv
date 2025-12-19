@@ -1,0 +1,6 @@
+Model,Default_Threshold,Optimal_Threshold,Optimal_Sensitivity,Optimal_Specificity,Optimal_Clinical_Score,Score_Improvement
+Logistic Regression,0.5,0.1,0.9626,0.3337,167894.0,12792.0
+Random Forest,0.5,0.1,0.9923,0.077,172854.0,22806.0
+XGBoost,0.5,0.1,0.9707,0.2755,169386.0,18764.0
+SVM,0.5,0.1,0.9642,0.3292,168290.0,16250.0
+PyTorch Neural Network,0.5,0.1,0.996,0.0597,173636.0,24002.0

@@ -1,0 +1,21 @@
+Classification Report - PyTorch Neural Network
+===============================================
+
+ROC-AUC Score: 0.9436
+Training Time: 18.67 seconds
+
+              precision    recall  f1-score   support
+
+ No Diabetes     0.8314    0.9945    0.9057      6000
+    Diabetes     0.9958    0.8656    0.9261      9000
+
+    accuracy                         0.9171     15000
+   macro avg     0.9136    0.9300    0.9159     15000
+weighted avg     0.9300    0.9171    0.9179     15000
+
+
+Detailed Metrics:
+- True Negatives:  5967
+- False Positives: 33
+- False Negatives: 1210
+- True Positives:  7790

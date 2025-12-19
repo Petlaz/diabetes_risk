@@ -1,0 +1,21 @@
+Classification Report - XGBoost
+================================
+
+ROC-AUC Score: 0.9402
+Training Time: 0.25 seconds
+
+              precision    recall  f1-score   support
+
+ No Diabetes     0.8352    0.9943    0.9079      6000
+    Diabetes     0.9957    0.8692    0.9282      9000
+
+    accuracy                         0.9193     15000
+   macro avg     0.9154    0.9318    0.9180     15000
+weighted avg     0.9315    0.9193    0.9200     15000
+
+
+Detailed Metrics:
+- True Negatives:  5966
+- False Positives: 34
+- False Negatives: 1177
+- True Positives:  7823

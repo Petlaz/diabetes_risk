@@ -1,0 +1,6 @@
+Model,True_Negatives,False_Positives,False_Negatives,True_Positives,Sensitivity_Recall,Specificity,PPV_Precision,NPV,Missed_Cases,False_Alarms,ROC_AUC
+Logistic Regression,4876,1124,955,8045,0.8939,0.8127,0.8774,0.8362,955,1124,0.9346
+Random Forest,5994,6,1198,7802,0.8669,0.999,0.9992,0.8334,1198,6,0.9415
+XGBoost,5966,34,1177,7823,0.8692,0.9943,0.9957,0.8352,1177,34,0.9402
+SVM,5566,434,1170,7830,0.87,0.9277,0.9475,0.8263,1170,434,0.9353
+PyTorch Neural Network,5967,33,1210,7790,0.8656,0.9945,0.9958,0.8314,1210,33,0.9436
