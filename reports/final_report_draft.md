@@ -58,11 +58,11 @@ Effective clinical decision support requires balanced consideration of false pos
 ### 3.3 Class Imbalance Handling: Clinical vs. Traditional ML Approaches
 
 **Dataset Imbalance Characteristics:**
-Our diabetes dataset exhibits moderate class imbalance (60% diabetic, 40% non-diabetic, 1.5:1 ratio), representing an enriched training dataset with higher diabetes prevalence than typical clinical populations (~6%).
+Our diabetes dataset exhibits moderate class imbalance (60% diabetic, 40% non-diabetic, 1.5:1 ratio(moderate, not severe imbalance)), representing an enriched training dataset with higher diabetes prevalence than typical clinical populations (~6%).
 
 **Clinical-First Imbalance Strategy:**
 
-Instead of traditional ML resampling techniques, we implemented a clinically-driven approach:
+Instead of traditional ML resampling techniques, I implemented a clinically-driven approach:
 
 **1. Stratified Data Management:**
 - Stratified train/validation/test splits maintaining exact class distribution

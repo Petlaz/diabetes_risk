@@ -294,7 +294,7 @@ who have already been through that diagnostic process.
 
 ### **Understanding Our Dataset Imbalance**
 
-Diabetes prediction involves significant class imbalance (in our dataset: 60% diabetic, 40% non-diabetic), but our approach differs from traditional ML imbalance techniques:
+Diabetes prediction involves significant class imbalance (in our dataset: 60% diabetic, 40% non-diabetic, 1.5:1 (moderate, not severe imbalance)), but our approach differs from traditional ML imbalance techniques:
 
 ```
 Our Dataset Class Distribution:
@@ -305,7 +305,7 @@ Our Dataset Class Distribution:
 
 ### **Our Clinical-First Imbalance Strategy**
 
-**✅ What We Implemented:**
+**✅ What I Implemented:**
 
 **1. Stratified Sampling Throughout Pipeline:**
 ```
@@ -331,7 +331,7 @@ Clinical Cost Function:
 - Clinical threshold: 0.1 vs 0.5 (compensates for imbalance)
 ```
 
-### **Why We Didn't Use Traditional Imbalance Techniques**
+### **Why I Didn't Use Traditional Imbalance Techniques**
 
 **❌ SMOTE (Synthetic Minority Oversampling):**
 - **Clinical Risk**: Synthetic diabetic patterns might not reflect real pathophysiology
@@ -345,7 +345,7 @@ Clinical Cost Function:
 - **Clinical Reality**: Need comprehensive coverage of healthy population variations
 - **Our Alternative**: Full dataset with cost-aware optimization preserves all information
 
-### **Why Our Approach is Superior for Healthcare**
+### **Why my Approach is Superior for Healthcare**
 
 **Clinical Evidence of Success:**
 ```
