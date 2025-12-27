@@ -109,18 +109,38 @@ data/processed/*.csv
 *.hdf5
 *.parquet
 
-# Large model files (exclude trained models but allow small result files)
+# Large model files (exclude big trained models but allow essential result files)
 *.model
 *.weights
 *.ckpt
-models/*.pkl
-results/models/*.pkl
+# Exclude baseline models (too large for Git)
+results/models/baseline_*.pkl
+results/models/*_optimization_results*.pkl
+results/models/latest_optimization_results.pkl
+results/hyperparameter_tuning/*/optimization_results.pkl
+results/hyperparameter_tuning/*/backups/*.pkl
+# Large optimized models
+results/hyperparameter_tuning/*/individual_models/svm/*.pkl
+results/hyperparameter_tuning/*/individual_models/random_forest/*.pkl
+results/hyperparameter_tuning/*/individual_models/xgboost/*.pkl
 
-# Allow important result files
-!results/metrics/*.csv
-!results/clinical_decision_analysis.csv
-!results/error_analysis_summary.json
-!results/pytorch_neural_network_results.pkl
+# Allow essential small model files and deployment packages
+!results/models/clinical_diabetes_model_*.pkl
+!results/models/feature_*.pkl
+!results/models/categorical_mappings.pkl
+!results/models/transformation_log.pkl
+!results/models/pytorch_mps/*.pkl
+!results/clinical_deployment/models/*.pkl
+!results/hyperparameter_tuning/*/individual_models/data_scaler.pkl
+!results/hyperparameter_tuning/*/individual_models/logistic/*.pkl
+
+# Large image files (except key visualizations)
+results/**/*.png
+results/**/*.jpg
+results/**/*.jpeg
+# Allow key plots
+!results/plots/confusion_matrix_comparison.png
+!results/clinical_deployment/plots/*.png
 
 # Logs
 *.log

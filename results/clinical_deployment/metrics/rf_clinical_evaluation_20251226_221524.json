@@ -1,0 +1,37 @@
+{
+  "model_name": "Random Forest Clinical Champion",
+  "evaluation_timestamp": "20251226_221524",
+  "test_samples": 15000,
+  "inference_time_ms": 0.007337204615275064,
+  "clinical_threshold": 0.1,
+  "performance_metrics": {
+    "model_name": "Random Forest (Clinical Champion)",
+    "accuracy": 0.5999333333333333,
+    "precision": 0.5999333333333333,
+    "recall": 1.0,
+    "sensitivity": 1.0,
+    "specificity": 0.0,
+    "f1_score": 0.7499479144964374,
+    "roc_auc": 0.9425601159668928,
+    "pr_auc": 0.9714033043957262,
+    "ppv": 0.5999333333333333,
+    "npv": 0,
+    "clinical_cost": 6001.0,
+    "confusion_matrix": {
+      "TP": 8999,
+      "TN": 0,
+      "FP": 6001,
+      "FN": 0
+    },
+    "missed_diabetes_cases": 0,
+    "false_alarms": 6001
+  },
+  "clinical_interpretation": {
+    "total_diabetic_cases": 8999,
+    "total_non_diabetic_cases": 6001,
+    "missed_diabetes_cases": 0,
+    "false_alarms": 6001,
+    "detection_rate": 1.0,
+    "specificity_rate": 0.0
+  }
+}

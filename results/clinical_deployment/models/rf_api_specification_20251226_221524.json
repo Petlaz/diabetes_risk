@@ -1,0 +1,67 @@
+{
+  "model_api": {
+    "name": "diabetes_screening_rf",
+    "version": "1.0.0",
+    "description": "Random Forest model for diabetes screening",
+    "endpoints": {
+      "predict": {
+        "method": "POST",
+        "input_format": {
+          "type": "JSON",
+          "features": [
+            "hba1c",
+            "glucose_fasting",
+            "family_history_diabetes",
+            "age",
+            "employment_status_Employed",
+            "smoking_status_Never",
+            "ethnicity_White",
+            "physical_activity_minutes_per_week",
+            "gender_Male",
+            "gender_Female",
+            "education_level",
+            "hypertension_history",
+            "bmi",
+            "heart_rate",
+            "systolic_bp",
+            "triglycerides",
+            "cardiovascular_history",
+            "ethnicity_Black",
+            "alcohol_consumption_per_week",
+            "income_level",
+            "hdl_cholesterol",
+            "smoking_status_Former",
+            "screen_time_hours_per_day",
+            "employment_status_Retired",
+            "diastolic_bp",
+            "employment_status_Unemployed",
+            "ethnicity_Hispanic",
+            "smoking_status_Current"
+          ],
+          "example": {
+            "hba1c": 0.5,
+            "glucose_fasting": 1.2,
+            "family_history_diabetes": 0.8,
+            "age": 2.1,
+            "employment_status_Employed": 1.0
+          }
+        },
+        "output_format": {
+          "risk_score": "float (0.0-1.0)",
+          "risk_category": "string",
+          "recommendation": "string",
+          "model_version": "string"
+        }
+      },
+      "health": {
+        "method": "GET",
+        "output": "model status and metrics"
+      }
+    },
+    "performance": {
+      "latency_ms": 0.01,
+      "throughput": "1000+ predictions/second",
+      "memory": "< 100MB"
+    }
+  }
+}

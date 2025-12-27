@@ -1,0 +1,39 @@
+{
+  "session_id": "20251226_142454",
+  "optimization_summary": {
+    "timestamp": "20251226_142454",
+    "device": "mps",
+    "total_models": 4,
+    "successful_optimizations": 4,
+    "session_path": "/Users/peter/AI_ML_Projects/diabetes/results/hyperparameter_tuning/session_20251226_142454",
+    "clinical_focus": true,
+    "fn_fp_penalty": "10:1",
+    "optimization_complete": true
+  },
+  "model_results": {
+    "logistic": {
+      "name": "Logistic Regression",
+      "success": true,
+      "best_score": 2121.6,
+      "optimization_time": 8.262611150741577
+    },
+    "random_forest": {
+      "name": "Random Forest",
+      "success": true,
+      "best_score": 2420.8,
+      "optimization_time": 1011.8928949832916
+    },
+    "xgboost": {
+      "name": "XGBoost",
+      "success": true,
+      "best_score": 1971.4,
+      "optimization_time": 36.306067943573
+    },
+    "svm": {
+      "name": "Support Vector Machine",
+      "success": true,
+      "best_score": 1138.6,
+      "optimization_time": 1774.0036990642548
+    }
+  }
+}

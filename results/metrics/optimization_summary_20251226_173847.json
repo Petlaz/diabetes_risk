@@ -1,0 +1,38 @@
+{
+  "optimization_summary": {
+    "timestamp": "20251226_173847",
+    "models_optimized": 5,
+    "device": "mps",
+    "clinical_focus": true,
+    "recommended_model": "Random Forest",
+    "best_models": [
+      {
+        "rank": 1,
+        "model_name": "Random Forest",
+        "clinical_cost": 6001,
+        "roc_auc": 0.9425601159668928,
+        "sensitivity": 1.0,
+        "diagnosis": "Good Fit",
+        "composite_score": 0.8327430347900678
+      },
+      {
+        "rank": 2,
+        "model_name": "Logistic Regression",
+        "clinical_cost": 7394,
+        "roc_auc": 0.9328989673332772,
+        "sensitivity": 0.963773752639182,
+        "diagnosis": "Good Fit",
+        "composite_score": 0.7805291912556559
+      },
+      {
+        "rank": 3,
+        "model_name": "Support Vector Machine",
+        "clinical_cost": 7432,
+        "roc_auc": 0.934050153399814,
+        "sensitivity": 0.962440271141238,
+        "diagnosis": "Good Fit",
+        "composite_score": 0.7793911544764394
+      }
+    ]
+  }
+}

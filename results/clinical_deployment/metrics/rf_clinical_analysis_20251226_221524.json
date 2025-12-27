@@ -1,0 +1,183 @@
+{
+  "analysis_timestamp": "20251226_221524",
+  "risk_stratification": {
+    "distribution": {
+      "Moderate Risk": 6532,
+      "High Risk": 4822,
+      "Very High Risk": 3646
+    },
+    "categories": [
+      "Very High Risk",
+      "High Risk",
+      "Moderate Risk",
+      "Low Risk"
+    ]
+  },
+  "threshold_analysis": [
+    {
+      "Threshold": 0.05,
+      "Sensitivity": 1.0,
+      "Specificity": 0.0,
+      "Missed_Cases": "0",
+      "False_Alarms": "6001",
+      "Clinical_Cost": "6001"
+    },
+    {
+      "Threshold": 0.1,
+      "Sensitivity": 1.0,
+      "Specificity": 0.0,
+      "Missed_Cases": "0",
+      "False_Alarms": "6001",
+      "Clinical_Cost": "6001"
+    },
+    {
+      "Threshold": 0.2,
+      "Sensitivity": 1.0,
+      "Specificity": 0.0,
+      "Missed_Cases": "0",
+      "False_Alarms": "6001",
+      "Clinical_Cost": "6001"
+    },
+    {
+      "Threshold": 0.3,
+      "Sensitivity": 1.0,
+      "Specificity": 0.0,
+      "Missed_Cases": "0",
+      "False_Alarms": "6001",
+      "Clinical_Cost": "6001"
+    },
+    {
+      "Threshold": 0.5,
+      "Sensitivity": 0.8847649738859873,
+      "Specificity": 0.91568071988002,
+      "Missed_Cases": "1037",
+      "False_Alarms": "506",
+      "Clinical_Cost": "10876"
+    }
+  ],
+  "optimal_threshold": {
+    "threshold": 0.05,
+    "clinical_cost": 6001.0
+  },
+  "feature_importance": [
+    {
+      "Feature": "hba1c",
+      "Importance": 0.5334758637352817
+    },
+    {
+      "Feature": "glucose_fasting",
+      "Importance": 0.27974672773612447
+    },
+    {
+      "Feature": "family_history_diabetes",
+      "Importance": 0.08262594744209262
+    },
+    {
+      "Feature": "age",
+      "Importance": 0.03918464391916375
+    },
+    {
+      "Feature": "bmi",
+      "Importance": 0.01807374166939263
+    },
+    {
+      "Feature": "physical_activity_minutes_per_week",
+      "Importance": 0.017831153681277186
+    },
+    {
+      "Feature": "systolic_bp",
+      "Importance": 0.016257714110759814
+    },
+    {
+      "Feature": "triglycerides",
+      "Importance": 0.0045705438226172615
+    },
+    {
+      "Feature": "hdl_cholesterol",
+      "Importance": 0.003102362387841837
+    },
+    {
+      "Feature": "diastolic_bp",
+      "Importance": 0.0014250587357658331
+    },
+    {
+      "Feature": "heart_rate",
+      "Importance": 0.0012897852368520776
+    },
+    {
+      "Feature": "cardiovascular_history",
+      "Importance": 0.0012306748703492236
+    },
+    {
+      "Feature": "screen_time_hours_per_day",
+      "Importance": 0.00042783701088297153
+    },
+    {
+      "Feature": "hypertension_history",
+      "Importance": 0.0004203602194185258
+    },
+    {
+      "Feature": "income_level",
+      "Importance": 7.975849454594486e-05
+    },
+    {
+      "Feature": "employment_status_Retired",
+      "Importance": 7.100733887815929e-05
+    },
+    {
+      "Feature": "alcohol_consumption_per_week",
+      "Importance": 5.355014795199661e-05
+    },
+    {
+      "Feature": "education_level",
+      "Importance": 5.029288110133162e-05
+    },
+    {
+      "Feature": "gender_Female",
+      "Importance": 3.306557211668443e-05
+    },
+    {
+      "Feature": "smoking_status_Current",
+      "Importance": 1.6145063941745343e-05
+    },
+    {
+      "Feature": "gender_Male",
+      "Importance": 8.070567499625957e-06
+    },
+    {
+      "Feature": "smoking_status_Never",
+      "Importance": 6.690720788284558e-06
+    },
+    {
+      "Feature": "ethnicity_Black",
+      "Importance": 6.063327871117224e-06
+    },
+    {
+      "Feature": "ethnicity_Hispanic",
+      "Importance": 5.176644274999677e-06
+    },
+    {
+      "Feature": "smoking_status_Former",
+      "Importance": 4.351645449579671e-06
+    },
+    {
+      "Feature": "ethnicity_White",
+      "Importance": 2.106780755334276e-06
+    },
+    {
+      "Feature": "employment_status_Unemployed",
+      "Importance": 7.14669421780588e-07
+    },
+    {
+      "Feature": "employment_status_Employed",
+      "Importance": 5.915675836871413e-07
+    }
+  ],
+  "clinical_recommendations": {
+    "screening_threshold": 0.1,
+    "immediate_referrals": 3646,
+    "standard_testing": 4822,
+    "enhanced_monitoring": 6532,
+    "total_clinical_workload": 15000
+  }
+}

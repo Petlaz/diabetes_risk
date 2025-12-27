@@ -1,0 +1,42 @@
+{
+  "logistic": {
+    "diagnosis": "Good Fit",
+    "train_score": 0.9340555392487297,
+    "test_score": 0.9328989673332773,
+    "performance_gap": 0.0011565719154524867,
+    "score_type": "ROC-AUC",
+    "recommendation": "Model shows excellent generalization"
+  },
+  "random_forest": {
+    "diagnosis": "Good Fit",
+    "train_score": 0.9445441040196326,
+    "test_score": 0.9425601159668928,
+    "performance_gap": 0.0019839880527398046,
+    "score_type": "ROC-AUC",
+    "recommendation": "Model shows excellent generalization"
+  },
+  "xgboost": {
+    "diagnosis": "Slight Overfitting",
+    "train_score": 0.9983619990904545,
+    "test_score": 0.9387907882671479,
+    "performance_gap": 0.05957121082330663,
+    "score_type": "ROC-AUC",
+    "recommendation": "Model performs well with minor overfitting"
+  },
+  "svm": {
+    "diagnosis": "Good Fit",
+    "train_score": 0.9471569249576595,
+    "test_score": 0.934050153399814,
+    "performance_gap": 0.013106771557845454,
+    "score_type": "ROC-AUC",
+    "recommendation": "Model shows excellent generalization"
+  },
+  "pytorch_mps": {
+    "diagnosis": "Good Fit",
+    "train_score": 0.7586707375581165,
+    "test_score": 0.7534567848722624,
+    "performance_gap": 0.005213952685854117,
+    "score_type": "ROC-AUC",
+    "recommendation": "Model shows excellent generalization"
+  }
+}
