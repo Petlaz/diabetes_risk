@@ -1,33 +1,40 @@
 services:
-  health-xai-app:
+  diabetes-xai-gradio:
     build:
       context: ..
       dockerfile: docker/Dockerfile
     ports:
-      - "7860:7860"  # Gradio app
+      - "7860:7860"  # Gradio diabetes XAI app
+    volumes:
+      - ../data:/app/data
+      - ../results:/app/results
+      - ../app:/app/app
+      - ../src:/app/src
+    environment:
+      - PYTHONPATH=/app/src:/app
+      - GRADIO_SERVER_NAME=0.0.0.0
+      - GRADIO_SERVER_PORT=7860
+      - MPLBACKEND=Agg  # Non-interactive matplotlib backend
+    command: ["python", "app/app_gradio.py"]
+    
+  health-xai-dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "7861:7860"  # Alternative Gradio port for development
       - "8888:8888"  # Jupyter notebooks
     volumes:
       - ../data:/app/data
       - ../results:/app/results
       - ../notebooks:/app/notebooks
+      - ../app:/app/app
       - ../src:/app/src
     environment:
       - PYTHONPATH=/app/src:/app
       - JUPYTER_ENABLE_LAB=yes
-      - MPLBACKEND=Agg  # Non-interactive matplotlib backend for containers
+      - MPLBACKEND=Agg
     command: ["python", "app/app_gradio.py"]
-    
-  jupyter:
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile
-    ports:
-      - "8889:8888"  # Alternative Jupyter port
-    volumes:
-      - ../:/app
-    environment:
-      - PYTHONPATH=/app/src:/app
-      - JUPYTER_ENABLE_LAB=yes
       - MPLBACKEND=Agg
     command: ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''"]
     
