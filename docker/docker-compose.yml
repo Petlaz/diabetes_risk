@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   health-xai-app:
     build:
@@ -12,9 +10,11 @@ services:
       - ../data:/app/data
       - ../results:/app/results
       - ../notebooks:/app/notebooks
+      - ../src:/app/src
     environment:
-      - PYTHONPATH=/app/src
+      - PYTHONPATH=/app/src:/app
       - JUPYTER_ENABLE_LAB=yes
+      - MPLBACKEND=Agg  # Non-interactive matplotlib backend for containers
     command: ["python", "app/app_gradio.py"]
     
   jupyter:
@@ -26,9 +26,26 @@ services:
     volumes:
       - ../:/app
     environment:
-      - PYTHONPATH=/app/src
+      - PYTHONPATH=/app/src:/app
       - JUPYTER_ENABLE_LAB=yes
+      - MPLBACKEND=Agg
     command: ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''"]
+    
+  xai-test:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../data:/app/data
+      - ../results:/app/results
+      - ../notebooks:/app/notebooks
+      - ../src:/app/src
+    environment:
+      - PYTHONPATH=/app/src:/app
+      - MPLBACKEND=Agg
+    command: ["python", "docker/test_xai_docker.py"]
+    profiles:
+      - test  # Only run when explicitly requested
     
   # Optional: Add a database service for future enhancements
   # postgres:
