@@ -11,13 +11,16 @@
 
 ## Executive Summary
 
-This comprehensive framework outlines the clinical implementation of our diabetes risk prediction system following Week 3-4 completion. We have successfully prepared a deployment-ready Random Forest model that achieves 100% sensitivity with optimal clinical cost performance.
+This study presents a clinically oriented machine learning framework for diabetes risk screening, developed and evaluated using a large, internally held dataset. The proposed Random Forest model achieved 100% sensitivity on an independent test split, demonstrating strong potential as a screening tool for identifying individuals at high risk of diabetes.
+
+While the model shows excellent internal performance and strong generalization within the dataset, external validation on an independent population has not yet been performed. Therefore, results should be interpreted as internally validated performance, with external validation planned as a future step prior to clinical deployment.
 
 **Key Achievements:**
 - **Model Selection:** Random Forest identified as clinical champion
-- **Performance:** 100% sensitivity, 6,001 clinical cost
+- **Performance:** 100% sensitivity, 6,001 clinical cost (internally validated)
 - **Professional Implementation:** Industry-standard single-model approach
 - **Clinical Integration:** Healthcare workflow optimization completed
+- **Validation Status:** Internal validation complete, external validation pending
 
 ---
 
@@ -1104,11 +1107,22 @@ Session 20251226_221524:
 → Clinical cost: 6,001 | Sensitivity: 100% ✅
 ```
 
-**Validation Criteria Met:**
+**Internal Validation Criteria Met:**
 - ✅ **Sensitivity ≥ 95%:** Achieved 100% (exceeds requirement)
 - ✅ **Clinical Cost ≤ 7,000:** Achieved 6,001 (within target)
 - ✅ **ROC-AUC ≥ 0.90:** Achieved 0.9426 (clinical grade)
 - ✅ **Reproducibility:** Consistent across multiple sessions
+
+**Validation Strategy:**
+The model was evaluated using a stratified hold-out test set that was not used during training or hyperparameter tuning. This internal validation approach provides an unbiased estimate of model performance under controlled conditions.
+
+**Important:**
+This study does not include external validation using an independent dataset from a separate institution or population. As such, results reflect internal generalization performance, not real-world generalizability.
+
+External validation will be required before clinical deployment to assess robustness across:
+- Different demographic distributions
+- Different healthcare settings
+- Variations in data collection protocols
 
 ### 5.2 Clinical Impact Assessment
 
@@ -1163,6 +1177,21 @@ results/clinical_deployment/
 - **Monitoring:** Real-time performance and drift detection
 - **Maintenance:** Quarterly model validation protocols
 
+### 6.3 Clinical Readiness Assessment
+
+**Updated Clinical Readiness Assessment:**
+
+| Stage | Status |
+|-------|--------|
+| Internal validation | ✅ Completed |
+| External validation | ⏳ Pending |
+| Prospective evaluation | ❌ Not yet performed |
+| Regulatory readiness | ❌ Not yet applicable |
+| Research readiness | ✅ Complete |
+
+**Interpretation:**
+The model is research-ready and internally validated, suitable for academic evaluation and further external testing, but not yet clinically deployable without additional validation.
+
 ---
 
 ## 7. Next Phase Preparation (Week 5-6)
@@ -1208,12 +1237,17 @@ Our Week 3-4 implementation has successfully delivered a deployment-ready diabet
 
 ### 8.2 Clinical Impact
 
-**Healthcare Benefits Delivered:**
-- **Perfect Diabetes Detection:** Zero missed cases ensures maximum patient safety
-- **Optimal Resource Utilization:** Efficient screening with appropriate follow-up protocols
-- **Clinical Decision Support:** Evidence-based risk stratification and recommendations
+**Research Achievements:**
+- **Perfect Internal Sensitivity:** Zero missed cases in held-out test set
+- **Optimal Internal Performance:** Efficient screening within dataset validation
+- **Clinical Decision Support Framework:** Evidence-based risk stratification methodology
 
-Our implementation demonstrates professional ML practices suitable for healthcare deployment, with comprehensive validation, documentation, and integration capabilities that meet clinical standards.
+**Updated Conclusion:**
+This study demonstrates that a cost-sensitive Random Forest model can achieve perfect sensitivity for diabetes screening within an internally validated dataset. While the results indicate strong potential for clinical application, external validation on independent populations is required before real-world deployment. The findings support the model's suitability as a screening decision-support tool, pending further evaluation in diverse clinical settings.
+
+### 8.3 Limitations and Future Work
+
+A key limitation of this study is the absence of external validation on an independent dataset. Although internal validation demonstrates strong performance, future work will focus on evaluating generalizability across different populations, healthcare systems, and data distributions. External validation is essential to confirm clinical robustness prior to real-world deployment.
 
 ---
 
