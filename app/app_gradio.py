@@ -511,6 +511,9 @@ def main():
     print("🌐 Public URL: Generated automatically")
     print("=" * 50)
     
+    # Check for Docker environment variable to enable public sharing
+    share_enabled = os.getenv('GRADIO_SHARE', 'true').lower() == 'true'
+    
     try:
         demo.launch(
             server_name="0.0.0.0",

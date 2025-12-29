@@ -20,7 +20,8 @@ xgboost>=1.6.0
 lightgbm>=3.3.0
 
 # Web Interface
-gradio>=4.0.0
+gradio==3.50.2  # Compatible with huggingface_hub==0.19.4
+huggingface_hub==0.19.4  # Compatible with gradio==3.50.2
 
 # Jupyter for development with notebook format support
 jupyter>=1.0.0

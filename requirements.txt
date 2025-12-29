@@ -19,8 +19,8 @@ xgboost>=1.6.0
 lightgbm>=3.3.0
 
 # Web Interface
-gradio>=3.40.0
-streamlit>=1.25.0
+gradio==3.50.2  # Compatible with huggingface_hub==0.19.4
+huggingface_hub==0.19.4  # Compatible with gradio==3.50.2
 
 # Jupyter and Notebooks
 jupyter>=1.0.0
