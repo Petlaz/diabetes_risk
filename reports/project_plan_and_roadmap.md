@@ -190,24 +190,58 @@ Our accelerated Week 9-10 implementation significantly front-loaded Week 11-12 o
 **Deliverables:** ✅ **90% Complete** - Final report polish + presentation materials + stakeholder submission  
 **Reading:** ✅ Hands-On ML Appendix · ✅ Designing ML Systems Ch. 10
 
-### **Weeks 13–14 (Mar 10 – Mar 23): Cloud Deployment & Production Release** 🔄 **PENDING APPROVAL**
+### **Weeks 13–14 (Mar 10 – Mar 23): Multi-Platform Demo Deployment & Stakeholder Presentation** 🔄 **PENDING APPROVAL**
 
 **Status:** Awaiting finalization with Professor and Nightingale Company  
 
-**Proposed Tasks (Subject to Approval):**
-- [ ] Cloud platform selection and configuration
-- [ ] Production-ready Docker image optimization  
-- [ ] SSL certificates and security implementation
-- [ ] Public cloud deployment (Hugging Face Spaces/AWS/GCP)
-- [ ] Custom domain setup and DNS configuration
-- [ ] Load testing and performance monitoring
-- [ ] Production deployment documentation
-- [ ] Stakeholder demo and handover
+**Proposed Multi-Platform Deployment Strategy:**
 
-**Proposed Deliverables:** Live cloud deployment + Production documentation + Stakeholder presentation  
+**🤗 Hugging Face Spaces Deployment:**
+- [ ] Deploy research demonstration on Hugging Face Spaces platform
+- [ ] Academic community showcase with ML model card documentation
+- [ ] Research prototype presentation for peer review and academic sharing
+- [ ] Automatic deployment pipeline from GitHub repository
+- [ ] Community engagement and feedback collection from ML researchers
+
+**☁️ AWS Cloud Deployment:**
+- [ ] Professional enterprise-grade deployment on AWS (EC2/ECS/Lambda)
+- [ ] Custom domain setup with professional branding
+- [ ] SSL certificates and enterprise security implementation
+- [ ] Scalability demonstration for stakeholder presentations
+- [ ] Load testing and performance monitoring for business case
+
+**📊 Dual Deployment Benefits:**
+- **Academic Reach:** Hugging Face Spaces for research community engagement
+- **Professional Showcase:** AWS deployment for enterprise stakeholder demos
+- **Technical Versatility:** Multi-cloud capabilities demonstration
+- **Audience Targeting:** Different platforms serve different stakeholder needs
+- **Portfolio Enhancement:** Comprehensive deployment experience across platforms
+
+**🔬 Research Demonstration Framework:**
+- [ ] Consistent academic disclaimers across all platforms
+- [ ] "Research Prototype - Not for Clinical Use" branding
+- [ ] Educational and demonstration purpose clarification
+- [ ] Internal validation status and external validation requirements
+- [ ] Academic research project attribution
+
+**📋 Technical Implementation Tasks:**
+- [ ] Docker image optimization for multi-platform deployment
+- [ ] Platform-specific configuration and environment variables
+- [ ] Automated deployment pipelines and CI/CD setup
+- [ ] Performance monitoring and analytics implementation
+- [ ] Documentation for both academic and professional audiences
+
+**🎯 Stakeholder Deliverables:**
+- [ ] Live Hugging Face Spaces demo for academic review
+- [ ] Professional AWS deployment for business presentations
+- [ ] Comprehensive deployment documentation and user guides
+- [ ] Performance metrics and scalability analysis
+- [ ] Final stakeholder presentation with multi-platform demonstration
+
+**Proposed Deliverables:** Dual-platform live deployment + Academic research showcase + Professional enterprise demo + Stakeholder presentation materials  
 **Dependencies:** Final approval from Professor and Nightingale Heart
 
-**Note:** Week 13-14 scope and requirements will be updated once cloud deployment strategy is finalized with stakeholders.
+**Note:** Both deployments will maintain clear academic research positioning with appropriate disclaimers, demonstrating technical capabilities while emphasizing the research prototype nature and internal validation status.
 
 ## 📅 Summary of Biweekly Meetings
 
